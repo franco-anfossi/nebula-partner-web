@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useUser } from '@auth0/nextjs-auth0/client';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useUser } from "@auth0/nextjs-auth0/client";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ProfilePage() {
   const { user, error, isLoading } = useUser();
@@ -13,15 +13,15 @@ export default function ProfilePage() {
 
   if (!user) {
     // Redirige al login si el usuario no está autenticado
-    router.push('/api/auth/login');
+    router.push("/api/auth/login");
     return null;
   }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-4 p-8">
       <Image
-        src={user.picture || '/placeholder-profile.png'}
-        alt={user.name || 'User Avatar'}
+        src={user.picture || "/placeholder-profile.png"}
+        alt={user.name || "User Avatar"}
         width={100}
         height={100}
         className="rounded-full"
@@ -31,7 +31,7 @@ export default function ProfilePage() {
 
       <div className="mt-4">
         <button
-          onClick={() => router.push('/')}
+          onClick={() => router.push("/")}
           className="px-4 py-2 rounded-full border transition-colors hover:bg-gray-200 dark:hover:bg-gray-700"
         >
           Back to Home
