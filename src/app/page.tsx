@@ -1,13 +1,12 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import NavButton from '../components/NavButton';
-import FooterLink from '../components/FooterLink';
-import { useUser } from '@auth0/nextjs-auth0/client';
+import Image from "next/image";
+import NavButton from "../components/NavButton";
+import FooterLink from "../components/FooterLink";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Home() {
   const { user, isLoading } = useUser();
-  console.log(user);
 
   if (isLoading) return <p>Loading...</p>;
 
