@@ -9,9 +9,6 @@ const nextConfig = {
     ],
     formats: ["image/avif", "image/webp"],
   },
-  experimental: {
-    appDir: true,
-  },
   eslint: {
     dirs: ["src"],
   },
