@@ -1,14 +1,5 @@
 ```
 nebula-partner-web/
-├── public/
-│   ├── assets/
-│   │   ├── icons/
-│   │   │   └── favicon.ico
-│   │   └── images/
-│   │       └── .gitkeep
-│   └── fonts/
-│       ├── GeistMonoVF.woff
-│       └── GeistVF.woff
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -16,25 +7,41 @@ nebula-partner-web/
 │   │   │       └── [auth0]/
 │   │   │           └── route.ts
 │   │   ├── profile/
+│   │   │   ├── basic-info.tsx
+│   │   │   ├── company-setup.tsx
+│   │   │   ├── edit.tsx
 │   │   │   ├── error.tsx
 │   │   │   ├── layout.tsx
 │   │   │   ├── loading.tsx
-│   │   │   └── page.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── role-selection.tsx
+│   │   │   └── setup.tsx
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   ├── not-found.tsx
 │   │   └── page.tsx
 │   ├── components/
 │   │   ├── FooterLink.tsx
-│   │   └── NavButton.tsx
+│   │   ├── NavButton.tsx
+│   │   └── Navbar.tsx
 │   ├── config/
 │   │   └── .gitkeep
 │   ├── hooks/
 │   │   └── .gitkeep
 │   ├── lib/
 │   │   └── .gitkeep
+│   ├── public/
+│   │   ├── assets/
+│   │   │   ├── icons/
+│   │   │   │   └── favicon.ico
+│   │   │   └── images/
+│   │   │       └── .gitkeep
+│   │   └── fonts/
+│   │       ├── GeistMonoVF.woff
+│   │       └── GeistVF.woff
 │   ├── services/
-│   │   └── .gitkeep
+│   │   ├── .gitkeep
+│   │   └── api.ts
 │   ├── styles/
 │   │   └── .gitkeep
 │   ├── theme/
@@ -47,7 +54,6 @@ nebula-partner-web/
 ├── .eslintrc.json
 ├── .gitignore
 ├── README.md
-├── estructura.md
 ├── generate_structure.ts
 ├── next-env.d.ts
 ├── next.config.mjs
@@ -55,6 +61,7 @@ nebula-partner-web/
 ├── package.json
 ├── postcss.config.mjs
 ├── prettier.config.ts
+├── structure.md
 ├── tailwind.config.ts
 └── tsconfig.json
 ```
