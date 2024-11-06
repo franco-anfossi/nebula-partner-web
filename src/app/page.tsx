@@ -1,6 +1,6 @@
 "use client";
 
-import FooterLink from "../components/FooterLink";
+import FooterLink from "@/components/FooterLink";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Home() {
