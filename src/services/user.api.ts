@@ -23,10 +23,11 @@ export async function updateUser(
   userId: number,
   updatedData: Partial<Omit<User, "id" | "createdAt">>,
 ): Promise<User> {
-  const response = await api.put<User>(`/users/${userId}`, updatedData);
+  const response = await api.patch<User>(`/users/${userId}`, updatedData);
   return response.data;
 }
 
 export async function deleteUser(userId: number): Promise<void> {
-  await api.delete(`/users/${userId}`);
+  const response = await api.delete(`/users/${userId}`);
+  return response.data;
 }
