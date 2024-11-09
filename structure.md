@@ -3,24 +3,29 @@ nebula-partner-web/
 ├── src/
 │   ├── app/
 │   │   ├── api/
-│   │   │   └── auth/
-│   │   │       └── [auth0]/
-│   │   │           └── route.ts
+│   │   │   ├── auth/
+│   │   │   │   └── [auth0]/
+│   │   │   │       └── route.ts
+│   │   │   └── get-token/
+│   │   │       └── route.ts
 │   │   ├── profile/
-│   │   │   ├── basic-info.tsx
-│   │   │   ├── company-setup.tsx
-│   │   │   ├── edit.tsx
+│   │   │   ├── edit/
+│   │   │   │   └── page.tsx
+│   │   │   ├── setup/
+│   │   │   │   └── page.tsx
 │   │   │   ├── error.tsx
 │   │   │   ├── layout.tsx
 │   │   │   ├── loading.tsx
-│   │   │   ├── page.tsx
-│   │   │   ├── role-selection.tsx
-│   │   │   └── setup.tsx
+│   │   │   └── page.tsx
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   ├── not-found.tsx
 │   │   └── page.tsx
 │   ├── components/
+│   │   ├── BackToHomeButton.tsx
+│   │   ├── BackToProfileButton.tsx
+│   │   ├── DeleteAccountButton.tsx
+│   │   ├── EditProfileButton.tsx
 │   │   ├── FooterLink.tsx
 │   │   ├── NavButton.tsx
 │   │   └── Navbar.tsx
@@ -41,18 +46,21 @@ nebula-partner-web/
 │   │       └── GeistVF.woff
 │   ├── services/
 │   │   ├── .gitkeep
-│   │   └── api.ts
+│   │   ├── api.ts
+│   │   └── user.api.ts
 │   ├── styles/
 │   │   └── .gitkeep
 │   ├── theme/
 │   │   └── .gitkeep
 │   └── types/
-│       └── .gitkeep
+│       ├── .gitkeep
+│       └── user.types.ts
 ├── tests/
 │   └── .gitkeep
 ├── .env.local
 ├── .eslintrc.json
 ├── .gitignore
+├── .nvmrc
 ├── README.md
 ├── generate_structure.ts
 ├── next-env.d.ts

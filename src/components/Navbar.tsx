@@ -7,23 +7,38 @@ export default function Navbar() {
   const { user, isLoading } = useUser();
 
   return (
-    <nav className="w-full bg-white shadow-md p-4">
+    <nav className="w-full bg-white dark:bg-gray-900 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold text-gray-900">
+        <Link
+          href="/"
+          className="text-xl font-bold text-gray-900 dark:text-gray-200"
+        >
           Nebula Partner
         </Link>
 
         <div className="flex items-center space-x-6">
-          <Link href="/features" className="text-gray-700 hover:text-gray-900">
+          <Link
+            href="/features"
+            className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+          >
             Features
           </Link>
-          <Link href="/pricing" className="text-gray-700 hover:text-gray-900">
+          <Link
+            href="/pricing"
+            className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+          >
             Pricing
           </Link>
-          <Link href="/about" className="text-gray-700 hover:text-gray-900">
+          <Link
+            href="/about"
+            className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+          >
             About
           </Link>
-          <Link href="/contact" className="text-gray-700 hover:text-gray-900">
+          <Link
+            href="/contact"
+            className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+          >
             Contact
           </Link>
         </div>
@@ -36,13 +51,13 @@ export default function Navbar() {
             <>
               <Link
                 href="/profile"
-                className="text-gray-700 hover:text-gray-900"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
               >
                 Profile
               </Link>
               <Link
                 href="/api/auth/logout"
-                className="text-gray-700 hover:text-gray-900"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
               >
                 Logout
               </Link>
@@ -50,7 +65,7 @@ export default function Navbar() {
           ) : (
             <Link
               href="/api/auth/login"
-              className="text-gray-700 hover:text-gray-900"
+              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
             >
               Login
             </Link>
