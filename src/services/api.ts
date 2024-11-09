@@ -5,9 +5,19 @@ const api = axios.create({
   timeout: 10000,
 });
 
+async function fetchToken() {
+  try {
+    const response = await axios.get("/api/get-token");
+    return response.data.token;
+  } catch (error) {
+    console.error("Error al obtener el token:", error);
+    return null;
+  }
+}
+
 api.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem("token");
+  async (config) => {
+    const token = await fetchToken();
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
